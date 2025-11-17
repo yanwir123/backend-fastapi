@@ -1,0 +1,225 @@
+{
+  "info": {
+    "name": "FastAPI Backend Test (Services, Gallery, Blog) FINAL",
+    "description": "Collection lengkap untuk mengetes semua fitur backend: Auth, Upload, Admin, Services, Gallery, Blog.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "AUTH - Register User",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/auth/register",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"user1\",\n  \"email\": \"user1@example.com\",\n  \"password\": \"password123\"\n}"
+        }
+      }
+    },
+
+    {
+      "name": "AUTH - Verify OTP",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/auth/verify-otp",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"user1@example.com\",\n  \"otp\": \"123456\"\n}"
+        }
+      }
+    },
+
+    {
+      "name": "AUTH - Login User",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"user1\",\n  \"password\": \"password123\"\n}"
+        }
+      }
+    },
+
+    {
+      "name": "AUTH - Login Admin",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}"
+        }
+      }
+    },
+
+    {
+      "name": "SERVICES - Create Service (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+        ],
+        "url": "{{base_url}}/services/",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "title", "value": "Service Baru", "type": "text" },
+            {
+              "key": "description",
+              "value": "Deskripsi service baru",
+              "type": "text"
+            },
+            { "key": "file", "type": "file", "src": "" }
+          ]
+        }
+      }
+    },
+
+    {
+      "name": "SERVICES - Get All Services",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/services/"
+      }
+    },
+
+    {
+      "name": "SERVICES - Update Service (Admin)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+        ],
+        "url": "{{base_url}}/services/1",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "title", "value": "Service Diupdate", "type": "text" },
+            {
+              "key": "description",
+              "value": "Deskripsi update",
+              "type": "text"
+            },
+            { "key": "file", "type": "file", "src": "" }
+          ]
+        }
+      }
+    },
+
+    {
+      "name": "SERVICES - Delete Service",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+        ],
+        "url": "{{base_url}}/services/1"
+      }
+    },
+
+    {
+      "name": "GALLERY - Create Gallery (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+        ],
+        "url": "{{base_url}}/gallery/",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "title", "value": "Foto Bengkel Baru", "type": "text" },
+            { "key": "file", "type": "file", "src": "" }
+          ]
+        }
+      }
+    },
+
+    {
+      "name": "GALLERY - Get All Gallery",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/gallery/"
+      }
+    },
+
+    {
+      "name": "GALLERY - Delete Gallery",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+        ],
+        "url": "{{base_url}}/gallery/1"
+      }
+    },
+
+    {
+      "name": "BLOG - Create Blog (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+        ],
+        "url": "{{base_url}}/blog/",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "title", "value": "Berita Terbaru", "type": "text" },
+            { "key": "content", "value": "Isi berita...", "type": "text" },
+            { "key": "file", "type": "file", "src": "" }
+          ]
+        }
+      }
+    },
+
+    {
+      "name": "BLOG - Get All Blog",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/blog/"
+      }
+    },
+
+    {
+      "name": "BLOG - Update Blog (Admin)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+        ],
+        "url": "{{base_url}}/blog/1",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "title", "value": "Judul Baru", "type": "text" },
+            { "key": "content", "value": "Konten baru", "type": "text" },
+            { "key": "file", "type": "file", "src": "" }
+          ]
+        }
+      }
+    },
+
+    {
+      "name": "BLOG - Delete Blog",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token_admin}}" }
+        ],
+        "url": "{{base_url}}/blog/1"
+      }
+    }
+  ],
+
+  "variable": [
+    { "key": "base_url", "value": "http://127.0.0.1:8000" },
+    { "key": "token_user", "value": "" },
+    { "key": "token_admin", "value": "" }
+  ]
+}

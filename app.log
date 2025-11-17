@@ -1,0 +1,107 @@
+2025-11-13 13:10:39,233 [INFO] - Root endpoint accessed
+2025-11-13 13:10:39,752 [INFO] - Root endpoint accessed
+2025-11-13 13:16:49,110 [INFO] - Register attempt for username=yanuararifin, email=aryifin08@gmail.com
+2025-11-13 13:31:18,407 [INFO] - Register attempt for username=bayu adnan, email=aryifin08@gmail.com
+2025-11-13 13:31:18,426 [WARNING] - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Aryif\Documents\Project-2025\PT. AUTOWINS WORKSHOP\FE\LAPORAN KERJA 3\kerja1\backend\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-11-13 13:31:30,072 [INFO] - Register attempt for username=bayu adnan, email=aryifin08@gmail.com
+2025-11-13 13:31:30,077 [WARNING] - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Aryif\Documents\Project-2025\PT. AUTOWINS WORKSHOP\FE\LAPORAN KERJA 3\kerja1\backend\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-11-13 13:33:50,682 [INFO] - Register attempt for username=bayu adnan, email=appdasdaw@example.com
+2025-11-13 13:33:50,944 [INFO] - User created id=4 username=bayu adnan
+2025-11-13 13:35:52,609 [INFO] - User login successful id=4 username=bayu adnan
+2025-11-13 13:54:39,101 [INFO] - Register attempt for username=string, email=user@example.com
+2025-11-13 13:56:17,203 [INFO] - Register attempt for username=string, email=user@example.com
+2025-11-13 13:57:01,650 [INFO] - Register attempt for username=string, email=user@example.com
+2025-11-13 22:06:57,290 [INFO] - Register attempt for username=yanuar, email=user@example.com
+2025-11-13 22:07:00,134 [INFO] - OTP sent to user@example.com
+2025-11-13 22:15:01,010 [INFO] - User verified email=user@example.com
+2025-11-13 22:19:55,571 [INFO] - User login successful id=5 username=yanuar
+2025-11-13 22:46:31,146 [INFO] - User verified email=aryifin08@gmail.com
+2025-11-13 22:48:33,535 [INFO] - User login successful id=7 username=string
+2025-11-13 23:11:22,481 [INFO] - User verified email=aryifin08@gmail.com
+2025-11-13 23:11:50,282 [INFO] - User login successful id=8 username=user1
+2025-11-13 23:16:55,064 [INFO] - Upload attempt by user_id=8 filename=PROPOSAL_PENGABDIAN_KEPADA_MASYARAKAT - Yanuar Arifin_compressed.pdf
+2025-11-13 23:16:55,140 [INFO] - File uploaded id=17 user_id=8 stored_as=ce4e42002bc24357a3373a0365b4c5f9.pdf
+2025-11-13 23:19:38,586 [INFO] - User login successful id=8 username=user1
+2025-11-13 23:42:43,595 [INFO] - Admin user1 melihat seluruh uploads
+2025-11-13 23:44:14,178 [INFO] - Admin user1 memperbarui status upload id=16 menjadi acc
+2025-11-13 23:45:08,066 [INFO] - Admin user1 melihat statistik upload
+2025-11-13 23:46:26,171 [INFO] - Contact form submitted id=3 name=Yanuar
+2025-11-14 00:01:03,464 [INFO] - User verified email=halliyati1980@gmail.com
+2025-11-14 00:01:30,552 [INFO] - User verified email=aryifin08@gmail.com
+2025-11-14 00:02:02,716 [INFO] - User login successful id=9 username=user1
+2025-11-14 00:02:54,493 [INFO] - Upload attempt by user_id=9 filename=HALAMAN_PERSETUJUAN_REVIEWER_231011402805_2346950871.pdf
+2025-11-14 00:02:54,517 [INFO] - File uploaded id=18 user_id=9 stored_as=8c5b7eff4bd8422f8d5a1200f31932c1.pdf
+2025-11-14 00:03:14,326 [INFO] - User login successful id=10 username=user2
+2025-11-14 00:08:08,615 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-14 00:08:32,585 [INFO] - Admin user2 memperbarui status upload id=18 menjadi acc
+2025-11-14 00:08:58,752 [INFO] - Admin user2 memperbarui status upload id=18 menjadi rejected
+2025-11-14 00:09:08,550 [INFO] - Admin user2 melihat statistik upload
+2025-11-14 00:13:53,112 [INFO] - Contact form submitted id=4 name=Yanuar
+2025-11-14 00:16:19,725 [INFO] - Contact form submitted id=5 name=Yanuar
+2025-11-16 15:09:36,877 [INFO] - User login successful id=10 username=user2
+2025-11-17 10:00:53,934 [INFO] - User login successful id=10 username=user2
+2025-11-17 10:00:53,948 [INFO] - /users/me accessed user_id=10
+2025-11-17 10:00:54,071 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:00:54,084 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:01:19,746 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:01:19,761 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:01:20,768 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:01:20,785 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:01:45,218 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:01:45,227 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:12:09,823 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:12:09,842 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:12:35,691 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:12:35,716 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:12:40,016 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:12:40,033 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:13:13,527 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:13:13,538 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:13:54,531 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:13:54,541 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:14:22,528 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:14:22,539 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:17:43,877 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:17:43,900 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:19:42,078 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:19:42,094 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:19:43,069 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:19:43,085 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:19:44,051 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:19:44,070 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:28:42,326 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:28:42,341 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:31:54,583 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:31:54,595 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:50:11,242 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:50:11,257 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:50:14,748 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:50:14,763 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:50:19,140 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:50:19,153 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 10:50:21,055 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 10:50:21,070 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 11:03:05,493 [INFO] - User login successful id=10 username=user2
+2025-11-17 11:03:05,505 [INFO] - /users/me accessed user_id=10
+2025-11-17 11:03:05,635 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 11:03:05,656 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 11:03:44,087 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 11:03:44,098 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 11:09:49,887 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 11:09:49,901 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 11:09:58,735 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 11:09:58,765 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 11:10:03,174 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 11:10:03,190 [INFO] - Admin user2 melihat seluruh uploads
+2025-11-17 11:10:03,789 [INFO] - Admin user2 melihat statistik upload
+2025-11-17 11:10:03,806 [INFO] - Admin user2 melihat statistik upload
