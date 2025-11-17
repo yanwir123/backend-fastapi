@@ -1,7 +1,9 @@
 import os
 import logging
 
-# ==================== ENV VARIABLES ====================
+# ==================== ENV ====================
+ENVIRONMENT = os.getenv("ENVIRONMENT", "local")  # local / production
+
 DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
     raise ValueError("DATABASE_URL tidak ditemukan!")
@@ -12,9 +14,12 @@ if not SECRET_KEY:
 
 ALGORITHM = os.getenv("ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 60))
-FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
 
-# ==================== SMTP CONFIG ====================
+FRONTEND_URL = os.getenv("FRONTEND_URL")
+if not FRONTEND_URL:
+    FRONTEND_URL = "http://localhost:5173" if ENVIRONMENT == "local" else ""
+
+# ==================== SMTP ====================
 SMTP_HOST = os.getenv("SMTP_HOST", "smtp.gmail.com")
 SMTP_PORT = int(os.getenv("SMTP_PORT", 587))
 SMTP_USER = os.getenv("SMTP_USER")
@@ -24,6 +29,10 @@ SMTP_PASS = os.getenv("SMTP_PASS")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] - %(message)s",
-    handlers=[logging.StreamHandler()]  # Railway cukup ke console
+    handlers=[logging.StreamHandler()]
 )
 logger = logging.getLogger("app")
+
+logger.info(f"ENVIRONMENT: {ENVIRONMENT}")
+logger.info(f"DATABASE_URL: {DATABASE_URL}")
+logger.info(f"FRONTEND_URL: {FRONTEND_URL}")
