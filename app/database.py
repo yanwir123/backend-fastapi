@@ -1,16 +1,20 @@
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, declarative_base
 from .config import DATABASE_URL, logger
 
 # ===================== DATABASE CONNECTION =====================
-engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+try:
+    engine = create_engine(DATABASE_URL)
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    Base = declarative_base()
+    logger.info("Database engine dibuat sukses")
+except Exception as e:
+    logger.error(f"Gagal membuat engine database: {e}")
+    raise e
 
-Base = declarative_base()
-
+# Dependency FastAPI
 def get_db():
-    """Dependency untuk mendapatkan sesi database"""
+    """Dependency untuk mendapatkan session database"""
     db = SessionLocal()
     try:
         yield db

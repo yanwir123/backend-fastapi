@@ -1,15 +1,15 @@
-# app/config.py
-
 import os
-from dotenv import load_dotenv
 import logging
-
-# Load env file
-load_dotenv()
 
 # ==================== ENV VARIABLES ====================
 DATABASE_URL = os.getenv("DATABASE_URL")
-SECRET_KEY = os.getenv("SECRET_KEY")              # gunakan dari .env
+if not DATABASE_URL:
+    raise ValueError("DATABASE_URL tidak ditemukan!")
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+if not SECRET_KEY:
+    raise ValueError("SECRET_KEY tidak boleh kosong!")
+
 ALGORITHM = os.getenv("ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 60))
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
@@ -24,10 +24,6 @@ SMTP_PASS = os.getenv("SMTP_PASS")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] - %(message)s",
-    handlers=[
-        logging.FileHandler("app.log"),
-        logging.StreamHandler()
-    ]
+    handlers=[logging.StreamHandler()]  # Railway cukup ke console
 )
-
 logger = logging.getLogger("app")
