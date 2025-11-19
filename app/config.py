@@ -23,11 +23,11 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
     if ENVIRONMENT == "local":
         # fallback untuk local development
-        DATABASE_URL = "postgresql://postgres:server123@localhost:5432/postgres"
+        DATABASE_URL = "postgresql://postgres:server123@127.0.0.1:5432/postgres"
         logger.warning("DATABASE_URL tidak ditemukan, menggunakan default LOCAL.")
     else:
         # fallback untuk VPS (PostgreSQL default)
-        DATABASE_URL = "postgresql://postgres:server123@localhost:5432/postgres"
+        DATABASE_URL = "postgresql://postgres:server123@127.0.0.1:5432/postgres"
         logger.warning("DATABASE_URL tidak ditemukan, menggunakan default VPS LOCAL DB.")
 
 logger.info(f"DATABASE_URL digunakan: {DATABASE_URL}")
